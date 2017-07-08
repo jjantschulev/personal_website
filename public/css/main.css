@@ -9,7 +9,7 @@ p {
 }
 
 .main_container {
-  width: 33.33%;
+  width: 50%;
   height: 50vh;
   float: left;
   margin: 0;
@@ -24,7 +24,7 @@ p {
   background-color: black;
   opacity: 0.2;
   position: absolute;
-  width: 33.33%;
+  width: 50%;
   height: 50vh;
   animation: darkfadeout 1s;
 
@@ -32,12 +32,15 @@ p {
 
 .text_container {
   margin: 60px 80px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-75%);
 }
 
 .heading {
 
   transition: all 0.7s ease-in-out;
-  transform: translate(0,15vh);
+  transform: translate(0,8vh);
 }
 
 .content {

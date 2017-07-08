@@ -5,10 +5,123 @@
     <title>Music</title>
 
     <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="/css/music.css">
+
   </head>
   <body>
-    <div class="main_container">
-      
+    <div class="content">
+      <div class="main_container">
+        <div class="album">
+          <div class="album_art" id=""></div>
+          <div class="songs">
+            <h2>Album Name</h2>
+            <p>Song Name</p>
+            <p>Song Name</p>
+            <p>Song Name</p>
+            <p>Song Name</p>
+          </div>
+        </div>
+      </div>
+      <div class="main_container">
+        <div class="album">
+          <div class="album_art" id=""></div>
+          <div class="songs">
+            <h2>Album Name</h2>
+            <p>Song Name</p>
+            <p>Song Name</p>
+            <p>Song Name</p>
+            <p>Song Name</p>
+          </div>
+        </div>
+      </div>
     </div>
+
+
+    <div id="up_arrow">
+      <svg fill="#FFFFFF" height="120" viewBox="0 0 24 24" width="120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+      </svg>
+    </div>
+
+    <div id="down_arrow">
+      <svg fill="#FFFFFF" height="120" viewBox="0 0 24 24" width="120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+        <path d="M0-.75h24v24H0z" fill="none"/>
+      </svg>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    var currentPos = 0;
+    var numberOfAlbums = 2;
+    numberOfAlbums--;
+
+    //disable scrolling via arrow keys
+    window.addEventListener("keydown", function(e) {
+    // space, page up, page down and arrow keys:
+    if([32, 33, 34, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+            e.preventDefault();
+        }
+    }, false);
+
+    $("#up_arrow").click(function(){
+      goUp();
+    });
+    $("#down_arrow").click(function(){
+      goDown();
+    });
+
+    $("body").keydown(function(event){
+      if(event.which == 38){
+        goUp();
+      } else if(event.which == 40){
+          goDown();
+      }
+    });
+
+    function goUp() {
+      if(currentPos < 0){
+        currentPos ++;;
+        var div = $(".content");
+        div.animate({
+          top: currentPos+'00vh'
+        },"slow");
+        var down_arrow = $("#down_arrow");
+        down_arrow.animate({
+          opacity: 1
+        });
+        if(currentPos = -1){
+          var up_arrow = $("#up_arrow");
+          up_arrow.animate({
+            opacity: 0
+          })
+        }
+      }
+    }
+
+    function goDown() {
+      if(currentPos > -numberOfAlbums){
+        currentPos --;
+        var div = $(".content");
+        div.animate({
+          top: currentPos+'00vh'
+        },"slow");
+        var up_arrow = $("#up_arrow");
+        up_arrow.animate({
+          opacity: 1
+        });
+        if(currentPos = -numberOfAlbums){
+          var down_arrow = $("#down_arrow");
+          down_arrow.animate({
+            opacity: 0
+          });
+        }
+        }
+      }
+
+    </script>
   </body>
 </html>
