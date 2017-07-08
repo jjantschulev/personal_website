@@ -1,0 +1,23 @@
+{
+  "name": "personal_website",
+  "version": "1.0.0",
+  "description": "Jordan Jantschulev's Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kraken22/personal_website.git"
+  },
+  "keywords": [
+    "website",
+    "html"
+  ],
+  "author": "Jordan Jantschulev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kraken22/personal_website/issues"
+  },
+  "homepage": "https://github.com/kraken22/personal_website#readme"
+}
