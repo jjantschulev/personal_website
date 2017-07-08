@@ -41,20 +41,22 @@ p {
 }
 
 .heading {
-  position: relative;
+
   transition: all 0.7s ease-in-out;
-  transform: translate(0,100%);
+  transform: translate(0,15vh);
 }
 
 .content {
   position: relative;
+  opacity: 0;
   transition: all 0.7s ease-in-out;
-  transform: translate(0,50vh);
+  transform: translate(0,20vh);
   animation: fadeout 0.7s;
 }
 
 .main_container:hover .content{
   transform: translate(0,0);
+  opacity: 1;
   animation: fadein 0.7s;
 }
 .main_container:hover .heading{
@@ -86,27 +88,27 @@ p {
 }
 
 
-#code {
+#box1 {
   color: white;
   background-image: url("/data/images/code.jpg");
 }
-#photos {
-  color: white;
-  background-image: url("/data/images/photos.jpg");
-}
-#school {
-  color: white;
-  background-image: url("/data/images/school.jpg");
-}
-#cycling{
-  color: white;
-  background-image: url("/data/images/cycling.jpg");
-}
-#music{
+#box2 {
   color: white;
   background-image: url("/data/images/music.jpg");
 }
-#film{
+#box3 {
+  color: white;
+  background-image: url("/data/images/school.jpg");
+}
+#box4 {
+  color: white;
+  background-image: url("/data/images/cycling.jpg");
+}
+#box5 {
+  color: white;
+  background-image: url("/data/images/photos.jpg");
+}
+#box6 {
   color: white;
   background-image: url("/data/images/film.jpg");
 }
