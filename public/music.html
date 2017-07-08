@@ -10,9 +10,9 @@
   </head>
   <body>
     <div class="content">
-      <div class="main_container">
+      <div class="main_container" id="alb_cont_1">
         <div class="album">
-          <div class="album_art" id=""></div>
+          <div class="album_art" id="album_1"></div>
           <div class="songs">
             <h2>Album Name</h2>
             <p>Song Name</p>
@@ -22,9 +22,21 @@
           </div>
         </div>
       </div>
-      <div class="main_container">
+      <div class="main_container" id="alb_cont_2">
         <div class="album">
-          <div class="album_art" id=""></div>
+          <div class="album_art" id="album_2"></div>
+          <div class="songs">
+            <h2>Album Name</h2>
+            <p>Song Name</p>
+            <p>Song Name</p>
+            <p>Song Name</p>
+            <p>Song Name</p>
+          </div>
+        </div>
+      </div>
+      <div class="main_container" id="alb_cont_1">
+        <div class="album">
+          <div class="album_art" id="album_1"></div>
           <div class="songs">
             <h2>Album Name</h2>
             <p>Song Name</p>
@@ -56,7 +68,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
     var currentPos = 0;
-    var numberOfAlbums = 2;
+    var numberOfAlbums = 3;
     numberOfAlbums--;
 
     //disable scrolling via arrow keys
@@ -78,13 +90,14 @@
       if(event.which == 38){
         goUp();
       } else if(event.which == 40){
-          goDown();
+        goDown();
       }
     });
 
     function goUp() {
       if(currentPos < 0){
-        currentPos ++;;
+        currentPos ++;
+        console.log(currentPos);
         var div = $(".content");
         div.animate({
           top: currentPos+'00vh'
@@ -93,11 +106,11 @@
         down_arrow.animate({
           opacity: 1
         });
-        if(currentPos = -1){
+        if(currentPos == 0){
           var up_arrow = $("#up_arrow");
           up_arrow.animate({
             opacity: 0
-          })
+          });
         }
       }
     }
@@ -105,6 +118,7 @@
     function goDown() {
       if(currentPos > -numberOfAlbums){
         currentPos --;
+        console.log(currentPos);
         var div = $(".content");
         div.animate({
           top: currentPos+'00vh'
@@ -113,7 +127,7 @@
         up_arrow.animate({
           opacity: 1
         });
-        if(currentPos = -numberOfAlbums){
+        if(currentPos == -numberOfAlbums){
           var down_arrow = $("#down_arrow");
           down_arrow.animate({
             opacity: 0
