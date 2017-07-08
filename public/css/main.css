@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 50px;
+
+}
+
+.main_container {
+  width: 33.33%;
+  height: 50vh;
+  float: left;
+  margin: 0;
+  text-align: center;
+  align-items: center;
+  overflow:hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.text_container {
+  margin: 100px;
+
+
+}
+
+#code {
+  color: white;
+  background-image: url("/data/images/code.jpg");
+}
+#photos {
+  color: white;
+  background-image: url("/data/images/photos.jpg");
+}
+#school {
+  color: white;
+  background-image: url("/data/images/school.jpg");
+}
+#cycling{
+  color: white;
+  background-image: url("/data/images/cycling.jpg");
+}
+#music{
+  color: white;
+  background-image: url("/data/images/music.jpg");
+}
+#film{
+  color: white;
+  background-image: url("/data/images/film.jpg");
+}
