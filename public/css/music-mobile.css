@@ -14,25 +14,6 @@ p {
   font-size: 3.2vmin;
 }
 
-audio {
-  display: block;
-  width: calc(100% - 10vmin);
-}
-
-#up_arrow {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-5vmin);
-  opacity: 0;
-}
-
-#down_arrow {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-5vmin);
-}
 
 .content {
   position: absolute;
@@ -73,45 +54,44 @@ audio {
 .album {
   width: 100%;
   height: 100vh;
-  max-width: 1300px;
-  margin: 0px auto;
+  margin: 0;
   background-color: transparent;
-  vertical-align: middle;
   position: relative;
-  top: 50%;
+  top: 0;
+  left: 0;
   display: block;
   overflow: hidden;
-  margin-top: -80vmin;
 }
 
 .album_art_container {
   position: relative;
-  top: 0;
+  top: 6vmin;
   left: 0;
-  width: 0;
-  height: 0;
+  width: 100%;
+  height: 74vmin;
   float: left;
   margin: 0;
 }
 
 .album_art {
-  position: relative;
-  width: 0vmin;
-  height: 0vmin;
-  float: left;
-  margin: 0vmin;
+  /*position: relative;*/
+  width: 70vmin;
+  height: 70vmin;
+  float: none;
+  display: block;
+  margin: 2vmin auto;
   background-size: cover;
-  border-radius: 0;
+  border-radius: 50%;
 }
 
 .songs_container {
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: 6vmin;
   left: 0;
   width: 100%;
-  height: 100%;
-  float: left;
-  margin: 0 0 0 0;
+  height: calc(100% - 92vmin);
+  margin: 0;
+  overflow: scroll;
 }
 
 .songs {
@@ -119,8 +99,8 @@ audio {
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 10vmin);
+  height: calc(100% - 10vmin);
   float: left;
-  padding: 5vmin;
+  margin: 5vmin;
 }

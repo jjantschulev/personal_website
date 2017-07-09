@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="/css/master.css">
     <link rel="stylesheet" href="/css/music.css">
-    <link href="/css/music-mobile.css" rel="stylesheet" media="all and (max-width: 1200px)">
+    <link href="/css/music-mobile.css" rel="stylesheet" media="all and (max-width: 1100px)">
   </head>
   <body>
     <div class="content">
@@ -20,6 +20,21 @@
           <div class="songs_container">
             <div class="songs">
               <h2>Album Name</h2>
+              <p>Song Name</p>
+              <audio controls
+                src="#">
+                Your browser does not support the audio tag. Please use Chrome or Safari
+              </audio>
+              <p>Song Name</p>
+              <audio controls
+                src="#">
+                Your browser does not support the audio tag. Please use Chrome or Safari
+              </audio>
+              <p>Song Name</p>
+              <audio controls
+                src="#">
+                Your browser does not support the audio tag. Please use Chrome or Safari
+              </audio>
               <p>Song Name</p>
               <audio controls
                 src="#">
@@ -197,6 +212,29 @@
             opacity: 0
           });
         }
+      }
+    }
+
+    var changeSlide = true;
+
+    $(".main_container").on('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
+      onScroll();
+    });
+
+    function onScroll () {
+      var e = window.event
+      if(e.wheelDelta < -80){
+        if (changeSlide) {
+          goDown();
+          changeSlide = false;
+        }
+      }else if (e.wheelDelta > 80) {
+        if (changeSlide) {
+          goUp();
+          changeSlide = false;
+        }
+      }else{
+        changeSlide = true;
       }
     }
     </script>
