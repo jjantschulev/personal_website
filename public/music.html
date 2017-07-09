@@ -6,58 +6,124 @@
 
     <link rel="stylesheet" href="/css/master.css">
     <link rel="stylesheet" href="/css/music.css">
-
+    <link href="/css/music-mobile.css" rel="stylesheet" media="all and (max-width: 1200px)">
   </head>
   <body>
     <div class="content">
+
+
       <div class="main_container" id="alb_cont_1">
         <div class="album">
-          <div class="album_art" id="album_1"></div>
-          <div class="songs">
-            <h2>Album Name</h2>
-            <p>Song Name</p>
-            <p>Song Name</p>
-            <p>Song Name</p>
-            <p>Song Name</p>
+          <div class="album_art_container">
+            <div class="album_art" id="album_1"></div>
+          </div>
+          <div class="songs_container">
+            <div class="songs">
+              <h2>Album Name</h2>
+              <p>Song Name</p>
+              <audio controls
+                src="#">
+                Your browser does not support the audio tag. Please use Chrome or Safari
+              </audio>
+              <p>Song Name</p>
+              <audio controls
+                src="#">
+                Your browser does not support the audio tag. Please use Chrome or Safari
+              </audio>
+              <p>Song Name</p>
+              <audio controls
+                src="#">
+                Your browser does not support the audio tag. Please use Chrome or Safari
+              </audio>
+              <p>Song Name</p>
+              <audio controls
+                src="#">
+                Your browser does not support the audio tag. Please use Chrome or Safari
+              </audio>
+            </div>
           </div>
         </div>
       </div>
+
       <div class="main_container" id="alb_cont_2">
         <div class="album">
-          <div class="album_art" id="album_2"></div>
-          <div class="songs">
-            <h2>Album Name</h2>
-            <p>Song Name</p>
-            <p>Song Name</p>
-            <p>Song Name</p>
-            <p>Song Name</p>
+          <div class="album_art_container">
+            <div class="album_art" id="album_2"></div>
+          </div>
+          <div class="songs_container">
+            <div class="songs">
+              <h2>Album Name</h2>
+              <p>Song Name</p>
+              <audio controls
+                src="#">
+                Your browser does not support the audio tag. Please use Chrome or Safari
+              </audio>
+              <p>Song Name</p>
+              <audio controls
+                src="#">
+                Your browser does not support the audio tag. Please use Chrome or Safari
+              </audio>
+              <p>Song Name</p>
+              <audio controls
+                src="#">
+                Your browser does not support the audio tag. Please use Chrome or Safari
+              </audio>
+              <p>Song Name</p>
+              <audio controls
+                src="#">
+                Your browser does not support the audio tag. Please use Chrome or Safari
+              </audio>
           </div>
         </div>
       </div>
-      <div class="main_container" id="alb_cont_1">
-        <div class="album">
-          <div class="album_art" id="album_1"></div>
-          <div class="songs">
-            <h2>Album Name</h2>
-            <p>Song Name</p>
-            <p>Song Name</p>
-            <p>Song Name</p>
-            <p>Song Name</p>
-          </div>
-        </div>
-      </div>
+
     </div>
+
+    <div class="main_container" id="alb_cont_3">
+      <div class="album">
+        <div class="album_art_container">
+          <div class="album_art" id="album_3"></div>
+        </div>
+        <div class="songs_container">
+          <div class="songs">
+            <h2>Album Name</h2>
+            <p>Song Name</p>
+            <audio controls
+              src="#">
+              Your browser does not support the audio tag. Please use Chrome or Safari
+            </audio>
+            <p>Song Name</p>
+            <audio controls
+              src="#">
+              Your browser does not support the audio tag. Please use Chrome or Safari
+            </audio>
+            <p>Song Name</p>
+            <audio controls
+              src="#">
+              Your browser does not support the audio tag. Please use Chrome or Safari
+            </audio>
+            <p>Song Name</p>
+            <audio controls
+              src="#">
+              Your browser does not support the audio tag. Please use Chrome or Safari
+            </audio>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 
 
     <div id="up_arrow">
-      <svg fill="#FFFFFF" height="120" viewBox="0 0 24 24" width="120" xmlns="http://www.w3.org/2000/svg">
+      <svg fill="#FFFFFF" height="10vmin" viewBox="0 0 24 24" width="10vmin" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
         <path d="M0 0h24v24H0z" fill="none"/>
       </svg>
     </div>
 
     <div id="down_arrow">
-      <svg fill="#FFFFFF" height="120" viewBox="0 0 24 24" width="120" xmlns="http://www.w3.org/2000/svg">
+      <svg fill="#FFFFFF" height="10vmin" viewBox="0 0 24 24" width="10vmin" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
         <path d="M0-.75h24v24H0z" fill="none"/>
       </svg>
@@ -97,7 +163,6 @@
     function goUp() {
       if(currentPos < 0){
         currentPos ++;
-        console.log(currentPos);
         var div = $(".content");
         div.animate({
           top: currentPos+'00vh'
@@ -118,7 +183,6 @@
     function goDown() {
       if(currentPos > -numberOfAlbums){
         currentPos --;
-        console.log(currentPos);
         var div = $(".content");
         div.animate({
           top: currentPos+'00vh'
@@ -133,9 +197,8 @@
             opacity: 0
           });
         }
-        }
       }
-
+    }
     </script>
   </body>
 </html>

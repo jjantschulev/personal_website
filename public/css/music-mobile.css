@@ -6,18 +6,17 @@ body {
 
 h2 {
   font-weight: 100;
-  font-size: 3.8vmin;
+  font-size: 6.4vmin;
   margin: 0;
 }
 
 p {
-  font-size: 1.8vmin;
+  font-size: 3.2vmin;
 }
 
 audio {
   display: block;
   width: calc(100% - 10vmin);
-
 }
 
 #up_arrow {
@@ -44,7 +43,7 @@ audio {
 
 .main_container {
   position: relative;
-  overflow: auto;
+  overflow: hidden;
   top: 0vh;
   left: 0;
   width: 100%;
@@ -73,7 +72,7 @@ audio {
 
 .album {
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   max-width: 1300px;
   margin: 0px auto;
   background-color: transparent;
@@ -81,40 +80,38 @@ audio {
   position: relative;
   top: 50%;
   display: block;
-  overflow-y: hidden;
-  overflow-x: hidden;
-
-  margin-top: -25vh;
+  overflow: hidden;
+  margin-top: -80vmin;
 }
 
 .album_art_container {
   position: relative;
   top: 0;
   left: 0;
-  width: 50vmin;
-  height: 100%;
+  width: 0;
+  height: 0;
   float: left;
   margin: 0;
 }
 
 .album_art {
   position: relative;
-  width: 40vmin;
-  height: 40vmin;
+  width: 0vmin;
+  height: 0vmin;
   float: left;
-  margin: 5vmin;
+  margin: 0vmin;
   background-size: cover;
-  border-radius: 50%;
+  border-radius: 0;
 }
 
 .songs_container {
   position: absolute;
   top: 0;
   left: 0;
-  width: calc(100% - 50vmin);
+  width: 100%;
   height: 100%;
   float: left;
-  margin: 0 0 0 50vmin;
+  margin: 0 0 0 0;
 }
 
 .songs {
@@ -126,28 +123,4 @@ audio {
   height: 100%;
   float: left;
   padding: 5vmin;
-}
-
-#alb_cont_1:before{
-  background-image: url("/data/images/cloud_seagull.jpg");
-}
-
-#album_1{
-  background-image: url("/data/images/cloud_seagull_square.jpg");
-}
-
-#alb_cont_2:before{
-  background-image: url("/data/images/rainbow_wave.jpg");
-}
-
-#album_2{
-  background-image: url("/data/images/rainbow_wave_square.jpg");
-}
-
-#alb_cont_3:before{
-  background-image: url("/data/images/running_mist.jpg");
-}
-
-#album_3{
-  background-image: url("/data/images/running_mist_square.jpg");
 }
