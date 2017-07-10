@@ -1,0 +1,20 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  display: block;
+  color: white;
+}
+
+.picture {
+  margin: 10px;
+}
+
+figure {
+  width: auto;
+  height: auto;
+  float: left;
+  display: block;
+  margin: 10px;
+}
