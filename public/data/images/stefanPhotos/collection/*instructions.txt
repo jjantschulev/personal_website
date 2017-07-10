@@ -1,0 +1,2 @@
+place folders full of images here
+the names of the folders will become the titles of section dividers:

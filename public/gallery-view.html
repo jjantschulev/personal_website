@@ -75,14 +75,14 @@
         for (var i = 0; i < jsonData.sectionNames.length; i++) {
           var sectionName = jsonData.sectionNames[i];
 
-          // var heading = $('<h1>'+sectionName+'\n</h1>')
+          var heading = $('<h1>'+sectionName+'</h1>')
           var div = $('<div class="picture" itemscope itemtype="http://schema.org/ImageGallery"></div>');
 
           for (var j = 0; j < jsonData[i.toString()].length; j++) {
             var photoName = jsonData[i.toString()][j];
             var figure = $('<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject"></figure>');
             var link = $('<a href="/data/images/stefanPhotos/collection/'+sectionName+'/'+photoName+'" itemprop="contentUrl" data-size="1920x1080" data-index="0"></a>');
-            var image = $('<img src="/data/images/stefanPhotos/collection/'+sectionName+'/'+photoName+'" height="180" width="180" itemprop="thumbnail" alt="">');
+            var image = $('<img src="/data/images/stefanPhotos/collection/*thumbnails/'+photoName.substring(0,photoName.length - 4)+'_tn.jpg" height="180" width="180" itemprop="thumbnail" alt="">');
 
             $(link).append(image);
             $(figure).append(link);
@@ -90,7 +90,7 @@
 
 
           }
-          // $("#container").append(heading);
+          $("#container").append(heading);
           $("#container").append(div);
 
         }
